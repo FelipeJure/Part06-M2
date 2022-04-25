@@ -18,7 +18,8 @@ describe("selectorTypeMatcher", function() {
     var type = selectorTypeMatcher('div');
     expect(type).toEqual("tag");
   });
-});
+}); 
+
 
 describe("matchFunctionMaker", function() {
 
