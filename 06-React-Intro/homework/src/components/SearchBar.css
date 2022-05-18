@@ -1,0 +1,10 @@
+#addbutton{
+    border-radius: 5px;
+    margin-bottom: 50px;
+    margin-left: 8px;
+  }
+  #addbutton:hover{
+    color:rgb(252, 251, 251);
+    background-color: rgba(76, 5, 5, 0.696);
+  }
+

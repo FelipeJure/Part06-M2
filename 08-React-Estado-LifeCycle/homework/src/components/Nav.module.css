@@ -1,0 +1,28 @@
+#logoHenry {
+  margin-right: 0.5rem;
+  width: 2.5rem;
+  border-radius: 0.5rem;
+}
+
+.frase {
+  color: wheat;
+}
+
+.nav{
+  background-color: #085662;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+@media (max-width:480px) {
+  .nav{
+    flex-wrap: wrap;
+    flex-direction: column;
+    display: flex;
+  }
+  #logoHenry {
+    margin: 0.5rem;
+  }
+}

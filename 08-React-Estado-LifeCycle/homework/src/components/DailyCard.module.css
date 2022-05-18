@@ -1,0 +1,23 @@
+
+.trio{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 2px 2px 6px 1px #000000;
+    border-radius: 0.5rem;
+    width: 9rem;
+    height: 12.5rem;
+    background-color: #8b6456;
+}
+
+.date{
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
+
+.temp{
+    display: flex;
+    flex-direction: row;
+    width: 7rem;
+    justify-content: space-around;
+}

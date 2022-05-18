@@ -1,0 +1,55 @@
+.contenedor {
+  width: 19rem;
+  height: 16rem;
+  background-color: rgb(20 50 80 / 25%);
+  flex-direction: row;
+  margin: 1.5rem;
+  border-radius: 10px;
+  backdrop-filter: blur(10rem);
+  box-shadow: 2px 2px 6px 1px #000000;
+  transition: transform 0.5s linear;
+}
+.contenedor:hover{
+  transform: scale(1.1);
+}
+.closeButton {
+  display: flex;
+  float: right;
+  color: wheat;
+  background-color: rgb(0 82 169 / 18%);
+  border-radius: 5px;
+  border-top-right-radius: 10px;
+  outline: none;
+  border: none;
+}
+.closeButton:hover{
+  background-color: rgb(175, 32, 32);
+}
+.closeButton:active{
+  background-color: rgba(175, 32, 32, 0.663);
+  outline: none;
+}
+.h1 {
+  padding-top: 1.7rem;
+  font-size: 2rem;
+}
+.h2{
+  font-size: 3.5rem;
+}
+.todo{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: -22px;
+}
+.text{
+  display: flex;
+  width: 15rem;
+  margin-top: -0.5rem;
+  justify-content:space-around ;
+}
+.imagen{
+  width: 7rem;
+  margin-top: 0.7rem;
+}

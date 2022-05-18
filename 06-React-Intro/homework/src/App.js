@@ -4,11 +4,19 @@ import Card from './components/Card.jsx';
 import Cards from './components/Cards.jsx';
 import SearchBar from './components/SearchBar.jsx';
 import data, { Cairns } from './data.js';
+import './components/Card.css'
+import './components/SearchBar.css'
+import './components/Cards.css'
 
 function App() {
   return (
     <div className="App">
       <div>
+        <SearchBar
+          onSearch={(ciudad) => {console.log (ciudad); alert(ciudad)}}
+        />
+      </div>
+      <div id='firstCity'>
         <Card
           max={Cairns.main.temp_max}
           min={Cairns.main.temp_min}
@@ -24,11 +32,6 @@ function App() {
         />
       </div>
       <hr />
-      <div>
-        <SearchBar
-          onSearch={(ciudad) => alert(ciudad)}
-        />
-      </div>
     </div>
   );
 }

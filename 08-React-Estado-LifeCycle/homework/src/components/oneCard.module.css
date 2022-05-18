@@ -1,0 +1,103 @@
+.contenedor {
+    width: 55rem;
+    height: 33rem;
+    background-color: rgb(20 50 80 / 25%);
+    flex-direction: row;
+    margin: 1rem;
+    border-radius: 10px;
+    backdrop-filter: blur(1rem);
+    box-shadow: 2px 2px 6px 1px #000000;
+}
+.closeButton {
+    display: flex;
+    float: right;
+    color: wheat;
+    background-color: rgb(20 50 80 / 25%);
+    border-radius: 5px;
+    border-top-right-radius: 10px;
+    outline: none;
+    border: none;
+}
+.closeButton:hover{
+    background-color: rgb(175, 32, 32);
+}
+.closeButton:active{
+    background-color: rgba(175, 32, 32, 0.663);
+    outline: none;
+}
+.h1 {
+    padding-top: 1rem;
+    font-size: 2rem;
+    display: flex;
+    width: 53rem;
+    justify-content: start;
+}
+ .h2{
+    display: flex;
+    font-size: 9rem;
+    margin-top: 1rem;
+
+} 
+.h3{
+    font-size: 2.3rem;
+}
+.h4{
+    font-size: 1.5rem;
+}
+.todo{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 1.5rem;
+}
+
+.imagen{
+    width: 12rem;
+    margin-top: 2rem;
+}
+.trio{
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    width: 25rem;
+    margin-left: 3rem;
+    justify-content: space-between;
+}
+.todos{
+    display: flex;
+    flex-direction: column;
+}
+.humedad, .st{
+    width: 3rem;
+    border-radius: 4rem;
+    margin-bottom: 0.6rem;
+}
+.elementos{
+    display: flex;
+    margin-top: -9rem;
+    margin-bottom: 2rem;
+    width: 12rem;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-left: 31rem;
+}
+
+.info {
+    display: flex;
+    flex-direction: row;
+    margin-top: -2rem;
+}
+
+.cards{
+    width: 52rem;
+    height: 8rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.time{
+    margin-top: -2rem;
+    font-size: 1.2rem;
+}

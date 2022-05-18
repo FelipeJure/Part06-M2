@@ -1,6 +1,12 @@
 import React from 'react';
+import s from './SearchBar.module.css';
 
 export default function SearchBar(props) {
-  // acá va tu código
-  return <div>Search Bar Component</div>
+  const handlerClick = () => {
+    return props.onSearch ('Ciudad del Cairo')
+  }
+  return (<div>
+    <input size={40} type='text' placeholder='City...' ></input>
+    <button onClick={handlerClick} id={s.addbutton} >Agregar</button>
+  </div>)
 };

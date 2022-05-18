@@ -1,5 +1,7 @@
 .App {
+  display: flex;
   text-align: center;
+  flex-direction: column;
 }
 
 .App-logo {
@@ -26,6 +28,9 @@
 
 .App-link {
   color: #61dafb;
+}
+#firstCity{
+  text-align: -webkit-center;
 }
 
 @keyframes App-logo-spin {
