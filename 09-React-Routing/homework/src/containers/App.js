@@ -5,9 +5,9 @@ import Nav from '../components/Nav.jsx';
 import Cards from '../components/Cards.jsx';
 import About from '../components/About';
 import Ciudad from '../components/Ciudad';
+import apikey from '../../../../08-React-Estado-LifeCycle/homework/src/apikey';
 
 
-const apiKey = '4ae2636d8dfbdc3044bede63951a019b';
 
 function App() {
   const [cities, setCities] = useState([]);
@@ -16,7 +16,7 @@ function App() {
   }
   function onSearch(ciudad) {
     //Llamado a la API del clima
-    fetch(`http://api.openweathermap.org/data/2.5/weather?q=${ciudad}&appid=${apiKey}`)
+    fetch(`http://api.openweathermap.org/data/2.5/weather?q=${ciudad}&appid=${apikey}`)
       .then(r => r.json())
       .then((recurso) => {
         if(recurso.main !== undefined){

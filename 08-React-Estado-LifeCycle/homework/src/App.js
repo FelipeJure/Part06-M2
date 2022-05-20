@@ -2,6 +2,8 @@ import React, {useState} from 'react';
 import './App.css';
 import Nav from './components/Nav';
 import Cards from './components/Cards';
+import apikey from './apikey'
+
 
 export default function App() {
   const [cities, setCities] = useState ([]);
@@ -12,7 +14,7 @@ export default function App() {
   
   function onSearch (ciudad, repeat) {
     if (ciudad){
-    fetch (`https://api.openweathermap.org/geo/1.0/direct?q=${ciudad}&appid=9cc9e1cb077397aea7e9340a13cedefb`)
+    fetch (`https://api.openweathermap.org/geo/1.0/direct?q=${ciudad}&appid=${apikey}`)
     .then(r => r.json())
     .then((search) => {
       const searcher = {
@@ -25,7 +27,7 @@ export default function App() {
         searcher.name = search[0].name
       } }else {
         searcher.name = search[0].name}
-      fetch (`https://api.openweathermap.org/data/2.5/onecall?lat=${searcher.lat}&lon=${searcher.lon}&exclude=hourly,minutely,alerts&lang=sp&appid=9cc9e1cb077397aea7e9340a13cedefb&units=metric`)
+      fetch (`https://api.openweathermap.org/data/2.5/onecall?lat=${searcher.lat}&lon=${searcher.lon}&exclude=hourly,minutely,alerts&lang=sp&appid=${apikey}&units=metric`)
     .then(r => r.json())
     .then((recurso) => {
       if(recurso.current){

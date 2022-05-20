@@ -1,16 +1,14 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-
-const apiKey = '4ae2636d8dfbdc3044bede63951a019b';
+import apikey from '../../../../08-React-Estado-LifeCycle/homework/src/apikey';
 
 export default function Ciudad(onFilter) {
     const {ciudadId} = useParams ()
- 
 
     const [city, setCity] = React.useState (undefined)
 
     React.useEffect (() => {
-    fetch(`http://api.openweathermap.org/data/2.5/weather?id=${ciudadId}&appid=${apiKey}`)
+    fetch(`http://api.openweathermap.org/data/2.5/weather?id=${ciudadId}&appid=${apikey}`)
     .then(r => r.json())
     .then((recurso) => {
         if(recurso.main !== undefined){
