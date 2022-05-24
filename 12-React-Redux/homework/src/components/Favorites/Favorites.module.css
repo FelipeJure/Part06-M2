@@ -1,0 +1,34 @@
+.cnt {
+    padding-top: 10px;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
+    margin-top: 2rem;
+    justify-items: center;
+}
+
+.imagen{
+    width: 12rem;
+}
+
+.title{
+    margin: 0;
+    display: flex;
+    width: 12 rem;
+    justify-content: center;
+}
+
+.info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.heart{
+    width: 1.5rem;
+    height: 1.5rem;
+    cursor: pointer;
+}

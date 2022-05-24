@@ -1,0 +1,23 @@
+.cnt {
+    padding-top: 10px;
+}
+.formContainer {
+    display:flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.formContainer button {
+    margin-left: 20px;
+}
+.label {
+    padding-right: 10px;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
+    margin-top: 2rem;
+    justify-items: center;
+}

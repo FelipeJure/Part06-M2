@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { Link } from 'react-router-dom';
-import './Buscador.css';
+import s from './Buscador.module.css';
+import { getMovies } from "../../actions";
+import MovieList from './Movies'
 
 
 
@@ -17,6 +18,8 @@ export class Buscador extends Component {
   }
   handleSubmit(event) {
     event.preventDefault();
+    this.props.getMovies (this.state.title)
+    this.setState({title: ''})
   }
 
   render() {
@@ -24,9 +27,9 @@ export class Buscador extends Component {
     return (
       <div>
         <h2>Buscador</h2>
-        <form className="form-container" onSubmit={(e) => this.handleSubmit(e)}>
+        <form className={s.formContainer} onSubmit={(e) => this.handleSubmit(e)}>
           <div>
-            <label className="label" htmlFor="title">Película: </label>
+            <label className={s.label} htmlFor="title">Película: </label>
             <input
               type="text"
               id="title"
@@ -37,12 +40,31 @@ export class Buscador extends Component {
           </div>
           <button type="submit">BUSCAR</button>
         </form>
-        <ul>
-         {/* Aqui tienes que escribir tu codigo para mostrar la lista de peliculas */}
-        </ul>
+        <div className={s.container} >
+          {this.props.movies.map (movie => 
+            <MovieList 
+              title={movie.Title} 
+              img={movie.Poster} 
+              id={movie.imdbID} 
+              key={movie.imdbID} 
+            />
+          )}
+        </div>
       </div>
     );
   }
 }
 
-export default Buscador;
+function mapStateToProps(state) {
+  return {
+    movies: state.loadedMovies
+  };
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    getMovies: title => dispatch(getMovies(title))
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Buscador)

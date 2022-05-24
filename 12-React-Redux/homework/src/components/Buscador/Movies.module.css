@@ -1,0 +1,26 @@
+.peli{
+    width: 12rem;
+    height: 20rem;
+}
+
+.imagen{
+    width: 12rem;
+}
+
+.title{
+    margin: 0;
+    display: flex;
+    width: 12 rem;
+    justify-content: center;
+}
+
+.info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.heart{
+    width: 1.5rem;
+    height: 1.5rem;
+    cursor: pointer;
+}
