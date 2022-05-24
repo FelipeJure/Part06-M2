@@ -30,19 +30,21 @@
   outline-width: 0;
 }
 
-.button-primary:hover {
+.buttonPrimary:hover, .buttonSecondary:hover {
   background-color: #2641d4;
   border: 1px solid #1b1f2b;
 }
 
-.button-primary-active {
+.buttonPrimary:active, .buttonSecondary:active {
   background-color: #3151ff;
   border: 1px solid #152684;
   color: white;
 }
 
-.button-primary-inactive {
+
+
+/* .buttonPrimary:inactive {
   background-color: #0f218a;
   border: 1px solid #152684;
   color: white;
-}
+} */
